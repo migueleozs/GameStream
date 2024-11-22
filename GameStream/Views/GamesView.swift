@@ -32,6 +32,8 @@ struct GamesView: View {
     
     
     var body: some View {
+        
+        
         ZStack {
             Color("Marine").ignoresSafeArea()
             

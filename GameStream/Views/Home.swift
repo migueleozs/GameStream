@@ -24,13 +24,11 @@ struct Home: View {
             }.tag(0).toolbarBackground(Color.white, for: .tabBar).toolbarBackground(.hidden, for: .tabBar)
             
             
-            Text("Pantalla Perfil").font(.system(size: 30, weight: .bold, design: .rounded)).tabItem {
-                Image(systemName: "person")
-                Text("Perfil")
-            }.tag(1).toolbarBackground(Color.white, for: .tabBar).toolbarBackground(.hidden, for: .tabBar)
             
-            
-            GamesView()
+            GamesView().tabItem {
+                Image(systemName: "gamecontroller")
+                Text("Juegos")
+            }.tag(0).toolbarBackground(Color.white, for: .tabBar).toolbarBackground(.hidden, for: .tabBar)
             
             
             
@@ -38,6 +36,12 @@ struct Home: View {
                 Image(systemName: "heart")
                 Text("Favoritos")
             }.tag(3).toolbarBackground(Color.white, for: .tabBar).toolbarBackground(.hidden, for: .tabBar)
+            
+            
+            Text("Pantalla Perfil").font(.system(size: 30, weight: .bold, design: .rounded)).tabItem {
+                Image(systemName: "person")
+                Text("Perfil")
+            }.tag(1).toolbarBackground(Color.white, for: .tabBar).toolbarBackground(.hidden, for: .tabBar)
             
             
         }.accentColor(.white)
